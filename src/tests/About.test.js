@@ -11,7 +11,7 @@ describe('Test the <About.js /> component', () => {
 
   test('the page must contain two paragraphs with text about pokedex', () => {
     render(<About />);
-    const paragraphs = screen.getAllByTestId('about-paragraph');
+    const paragraphs = screen.getAllByText(/Pokémons/);
     expect(paragraphs).toHaveLength(2);
   });
 
