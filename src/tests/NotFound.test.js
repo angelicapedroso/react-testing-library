@@ -14,9 +14,9 @@ describe('test the <NotFound.js /> component', () => {
 
   test('check the image', () => {
     render(<NotFound />);
-    const imagem = screen.getByAltText(
+    const image = screen.getByAltText(
       'Pikachu crying because the page requested was not found',
     );
-    expect(imagem).toHaveAttribute('src', 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
+    expect(image).toHaveAttribute('src', 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
 });
