@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import FavoritePokemons from '../components/FavoritePokemons';
+import renderWithRouter from './renderWithRouter';
+import pokemons from '../data';
 
 describe('test the <FavoritePokemons.js /> component', () => {
   test('tests the displayed message for the absence of favorite pokemons', () => {
@@ -10,8 +12,8 @@ describe('test the <FavoritePokemons.js /> component', () => {
   });
 
   test('all favorite pokemon cards must be displayed', () => {
-    render(<FavoritePokemons />);
-    const allFavoritePokemons = screen.getAllByTestId('favorite-pokemons');
+    renderWithRouter(<FavoritePokemons pokemons={ pokemons } />);
+    const allFavoritePokemons = screen.getAllByTestId('pokemon-name');
     allFavoritePokemons.forEach((favorite, index) => {
       expect(favorite).toBeInTheDocument([index].name);
     });

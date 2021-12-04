@@ -44,7 +44,7 @@ class FavoritePokemons extends React.Component {
     const isEmpty = pokemons.length === ZERO;
 
     return (
-      <div  data-testid="favorite-pokemons">
+      <div>
         <h2>Favorite pokémons</h2>
         { isEmpty ? notFound() : this.renderFavoritePokemons() }
       </div>
