@@ -1,4 +1,5 @@
-//segunda parte foi feita com ajuda do Pedro Lima 
+// segunda parte foi feat com abuja do Pedro Lima
+
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import FavoritePokemons from '../components/FavoritePokemons';
