@@ -5,7 +5,7 @@ import App from '../App';
 import pokemons from '../data';
 import renderWithRouter from './renderWithRouter';
 
-describe('test the <FavoritePokemons.js /> component', () => {
+describe('test the <Pokedex.js /> component', () => {
   test('test the heading and test the text page the page', () => {
     renderWithRouter(<App />);
     const heading = screen.getByRole('heading', {
